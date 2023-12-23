@@ -3,27 +3,91 @@ body {
     background-color: skyblue;
     font-family: Arial, sans-serif;
     text-align: center;
-
 }
+/*#page{*/
+/*    margin-top: 250px;*/
+/*}*/
 h1{
     font-size: 550%;
     margin: 0;
-    background-color: blanchedalmond;
+    background-color: black;
+    color: blanchedalmond;
 }
 #labels{
+    background-color: black;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
+    position: fixed;
+    top: 190px;
+    width: 100%;
 
 }
+#table{
+    margin-top: 357px;
+}
 
+/*#table_head{*/
+/*    position: fixed;*/
+/*    top: 372px;*/
+/*    !*right: 155px;*!*/
+/*    !* right: 4.5em; *!*/
+/*    border: 3px solid;*/
+/*    display: flex;*/
+/*    !*justify-content: center;*!*/
+/*    !*align-items: center;*!*/
+/*    width: 95%;*/
+/*}*/
+
+/*.input{*/
+/*    font-size: x-large;*/
+/*}*/
+#login {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    width: 70%;
+    height: 400px;
+    margin: 100px auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: xx-large;
+}
+
+#login h2 {
+    font-size: 44px;
+}
+
+#login input {
+    margin: 10px -10px;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: x-large;
+}
+
+#login-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    margin-top: 30px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 26px;
+}
 
 table {
     font-size: 350%;
-    margin: 2em auto;
+    margin: 0 auto 50px;
     border-collapse: collapse;
-    width: 80%;
+    width: 95%;
 }
 
 th, td {
@@ -32,12 +96,18 @@ th, td {
 }
 
 th {
+    font-size: 90%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
     background-color: gold;
+    width: 26%;
 }
 
-button {
+.btn {
     border-radius: 2rem;
     padding: 10px 20px;
+    margin: 2rem;
     background-color: #3498db;
     border: none;
     color: white;
@@ -55,8 +125,10 @@ button:hover {
      text-align: center;
      border-radius: 2rem;
      background-color: antiquewhite;
-    margin: 1.2em 1.7em;
-    font-size: 550%;
+     /*margin: 1.2em 1.7em;*/
+     font-size: 550%;
+     width: 30%;
+     height: 10%;
 }
 body {
     direction: rtl;
@@ -68,16 +140,19 @@ body {
 }
 
 #header {
+    position: fixed;
+    top: 0;
+    width: 94%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: blanchedalmond;
+    background-color: black;
     padding: 3rem;
     border-bottom: 2px solid black;
 }
 
 #header img {
-    width: 100px; /* כדאי להתאים את הגודל לגודל התמונה שלך */
+    width: 150px; /* כדאי להתאים את הגודל לגודל התמונה שלך */
 }
 
 #menu {
@@ -109,10 +184,12 @@ body {
 
 .menu-item {
     /*border: 2px solid black;*/
-    background-color: black;
+    background-color: white;
     /*padding: 10px 20px;*/
     cursor: pointer;
     width: 5em;
+    height: 1rem;
+    border-radius: 25px;
 }
 
 h1 {
@@ -120,3 +197,155 @@ h1 {
     margin: 0;
 }
 
+
+
+#overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 70%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: none;
+    color: white;
+}
+.menu-card p{
+    font-size: xx-large;
+    /*width: 100%;*/
+    height: 20%;
+    border-bottom: white solid 2px;
+}
+/*.menu-card {*/
+/*    background-color: #fff;*/
+/*    border: 1px solid #ccc;*/
+/*    border-radius: 5px;*/
+/*    width: 300px;*/
+/*    margin: 0 auto;*/
+/*    text-align: center;*/
+/*    position: fixed;*/
+/*    top: 50%;*/
+/*    left: 50%;*/
+/*    transform: translate(-50%, -50%);*/
+/*    display: none;*/
+/*}*/
+
+/*.menu-header {*/
+/*    padding: 20px;*/
+/*    background-color: #007bff;*/
+/*    color: #fff;*/
+/*}*/
+
+#exit-button {
+/*    font-size: xxx-large;*/
+/*    !*background-color: #ff0000;*!*/
+/*    !*color: #fff;*!*/
+/*    !*border: none;*!*/
+/*    !*border-radius: 5px;*!*/
+/*    !*padding: 10px 20px;*!*/
+/*    !*cursor: pointer;*!*/
+/*    !*font-size: 16px;*!*/
+/*    !*position: fixed;*!*/
+/*    !*bottom: 0;*!*/
+/*    margin-top: 25%;*/
+/*    right: 20%;*/
+/*    padding-top: 4em;*/
+    border-bottom: none;
+    /*background-color: #2980b9;*/
+    height: 300px;
+    width: 100%;
+    /*text-align: center;*/
+}
+#exit-button>span{
+    font-size: xxx-large;
+    /*background-color: #007bff;*/
+    /*width: 100%;*/
+    /*height: 100%;*/
+    /*margin: 100px;*/
+    position: relative;
+    bottom: -100px;
+}
+
+#userName,
+#userEmail {
+    font-weight: bold;
+}
+footer{
+    margin-top: 50px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: x-large;
+}
+
+body {
+    direction: rtl;
+    background-color: skyblue;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Add a media query for small screens (up to 767px) */
+@media only screen and (max-width: 767px) {
+    h1 {
+        font-size: 200%; /* Adjust the font size for smaller screens */
+    }
+
+    #labels {
+        top: 100px; /* Adjust the top position for smaller screens */
+    }
+
+    #table {
+        margin-top: 210px; /* Adjust the margin-top for smaller screens */
+    }
+
+    table {
+        font-size: 150%; /* Adjust the font size for smaller screens */
+    }
+
+    .btn, select {
+        font-size: 200%; /* Adjust the font size for smaller screens */
+        width: 30%; /* Adjust the width for smaller screens */
+        height: 3.5rem;
+    }
+
+    .menu-card>p{
+        font-size: 100%;
+    }
+
+    #header {
+        padding: 1rem; /* Adjust the padding for the header on smaller screens */
+    }
+    #login{
+        width: 80%;
+        height: 500px;
+        margin-top: 30px;
+    }
+    #login input{
+        margin-top: 40px;
+    }
+    #login-button{
+        margin-top: 60px;
+    }
+
+    #exit-button {
+        margin-top: 10%; /* Adjust the margin-top for the exit button on smaller screens */
+    }
+}
+
+/* Add a media query for medium screens (768px to 1023px) if needed */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    /* Add styles for medium screens here if needed */
+}
+
+/* Add a media query for large screens (1024px and above) if needed */
+@media only screen and (min-width: 1024px) {
+    /* Add styles for large screens here if needed */
+}

@@ -1,46 +1,3 @@
-<!--<!DOCTYPE html>-->
-<!--<html lang="en">-->
-<!--<head>-->
-<!--    <title>קפה ומאפה</title>-->
-<!--    <link rel="stylesheet" type="text/css" href="/css/coffee_styles.css">-->
-<!--</head>-->
-<!--<body>-->
-<!--<h1>קפה ומאפה</h1>-->
-<!--<div id="labels">-->
-
-<!--    <label for="name"></label>-->
-<!--    <select id="name">-->
-<!--        <option value="">שם:</option>-->
-<!--        <option value="נתי">נתי</option>-->
-<!--        <option value="ציון">ציון</option>-->
-<!--    </select>-->
-
-<!--    <label for="choice"></label>-->
-<!--    <select id="choice">-->
-<!--        <option value="">בחר:</option>-->
-<!--        <option value="קפה">קפה</option>-->
-<!--        <option value="מאפה">מאפה</option>-->
-<!--        <option value="גם וגם">גם וגם</option>-->
-<!--    </select>-->
-<!--</div>-->
-
-<!--<div>-->
-<!--    <button class="btn" onclick="addRow()">אישור</button>-->
-<!--    <table border="1">-->
-<!--        <thead>-->
-<!--        <tr>-->
-<!--            <th>שם</th>-->
-<!--            <th>בחירה</th>-->
-<!--            <th>תאריך</th>-->
-<!--            <th>שעה</th>-->
-<!--        </tr>-->
-<!--        </thead>-->
-<!--        <tbody id="dataTable"></tbody>-->
-<!--    </table>-->
-<!--</div>-->
-<!--<script src="/js/coffee_script.js"></script>-->
-<!--</body>-->
-<!--</html>-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -48,45 +5,72 @@
     <link rel="stylesheet" type="text/css" href="/css/coffee_styles.css">
 </head>
 <body>
-<div id="header">
-    <div id="menu">
-        <div class="menu-item">פריט 1</div>
-        <div class="menu-item">פריט 2</div>
-        <div class="menu-item">פריט 3</div>
+<div id="login">
+    <h2>קפה ומאפה</h2>
+    <input type="text" id="name" placeholder="שם">
+    <input type="email" id="email" placeholder="אימייל">
+    <button id="login-button" onclick="login()">כניסה</button>
+</div>
+
+<div id="main" style="display: none;">
+    <div id="header">
+        <div id="menu" onclick="open_menu()">
+            <div class="menu-item"></div>
+            <div class="menu-item"></div>
+            <div class="menu-item"></div>
+        </div>
+        <h1>קפה ומאפה</h1>
+        <img src="/images/cafe_maafe.jpg" alt="קפה ומאפה">
     </div>
-    <h1>קפה ומאפה</h1>
-    <img src="/path-to-your-image.jpg" alt="קפה ומאפה">
-</div>
-<div id="labels">
-    <label for="name"></label>
-    <select id="name">
-        <option value="">שם:</option>
-        <option value="נתי">נתי</option>
-        <option value="ציון">ציון</option>
-    </select>
 
-    <label for="choice"></label>
-    <select id="choice">
-        <option value="">בחר:</option>
-        <option value="קפה">קפה</option>
-        <option value="מאפה">מאפה</option>
-        <option value="גם וגם">גם וגם</option>
-    </select>
-</div>
+    <div id="page" onclick="close_menu()">
+    <div id="labels">
+<!--        <label for="name"></label>-->
+<!--        <select id="name">-->
+<!--            <option value="">שם:</option>-->
+<!--            <option value="נתי">נתי</option>-->
+<!--            <option value="ציון">ציון</option>-->
+<!--        </select>-->
 
-<div>
-    <button class="btn" onclick="addRow()">אישור</button>
-    <table border="1">
-        <thead>
-        <tr>
-            <th>שם</th>
-            <th>בחירה</th>
-            <th>תאריך</th>
-            <th>שעה</th>
-        </tr>
-        </thead>
-        <tbody id="dataTable"></tbody>
-    </table>
+        <label for="choice"></label>
+        <select id="choice">
+            <option value="">בחר:</option>
+            <option value="קפה">קפה</option>
+            <option value="מאפה">מאפה</option>
+            <option value="גם וגם">גם וגם</option>
+        </select>
+        <button class="btn" onclick="addRow()">אישור</button>
+    </div>
+        <br>
+        <div id="table">
+<!--        <table>-->
+<!--                <thead>-->
+<!--                <tr id="table_head">-->
+<!--                    <th>שם</th>-->
+<!--                    <th>בחירה</th>-->
+<!--                    <th>תאריך</th>-->
+<!--                    <th>שעה</th>-->
+<!--                </tr>-->
+<!--                </thead>-->
+<!--            </table>-->
+        <table border="1">
+            <tbody id="dataTable"></tbody>
+        </table>
+    </div>
+</div>
+<div class="overlay" id="overlay">
+<!--<div id="user-info" >-->
+    <div class="menu-card">
+<!--        <div class="menu-header">-->
+            <h2>הפרופיל שלי</h2><br>
+            <p>שם: <span id="userName"></span></p><br>
+            <p>אימייל: <span id="userEmail"></span></p><br>
+            <p id="exit-button" onclick="clearCookies()"><span>יציאה</span></p>
+<!--        </div>-->
+    </div>
+<!--</div>-->
+</div>
+    <footer>נוצר בזמן הפנוי במכללת כנרת מגמת תוכנה שנה א'</footer>
 </div>
 <script src="/js/coffee_script.js"></script>
 </body>

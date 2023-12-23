@@ -12,3 +12,10 @@ CREATE TABLE IF NOT EXISTS data (
     date DATE,
     time TIME
 );
+
+-- יצירת טבלה users
+CREATE TABLE IF NOT EXISTS users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(254),
+    email VARCHAR(254)
+);
